@@ -32,7 +32,13 @@ for PY in 2.7 3.3 3.4; do
 		exit 1
 	fi
 
+	python setup.py --dry-run install_binaries
+
 	deactivate
 done
 
 clean_stuff
+
+echo
+echo "All tests passed"
+echo

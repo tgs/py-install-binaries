@@ -45,12 +45,12 @@ class install_binaries(Command):
             self.copy_file(binary, path)
             self.outfiles.append(path)
 
-            old_mode = os.stat(path)[ST_MODE]
-            mode = (old_mode | 0o555) & 0o7777
-
             if self.dry_run:
-                log.info("  changing mode of %s +rx", path, mode)
+                log.info("  changing mode of %s +rx", path)
             else:
+                old_mode = os.stat(path)[ST_MODE]
+                mode = (old_mode | 0o555) & 0o7777
+
                 if old_mode & 0o0555 == 0o0555:
                     log.info("  mode of %s is already %o, leaving alone",
                              path, old_mode % 0o10000)
