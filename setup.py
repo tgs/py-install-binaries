@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name = "install_binaries",
-    version = "0.4",
+    version = "0.4.1",
     author = "Thomas Grenfell Smith",
     author_email = "smithtg@ncbi.nlm.nih.gov",
     description = "Install binaries to the same place Python would install scripts.",
