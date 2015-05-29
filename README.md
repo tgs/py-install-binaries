@@ -1,5 +1,7 @@
 # `install_binaries` - install executable programs in bin/
 
+[![PyPI version](https://badge.fury.io/py/install-binaries.svg)](http://badge.fury.io/py/install-binaries)
+
 `install_binaries` is a tool to help you create wrappers around
 executable files.  It ensures that they're installed in a reasonable
 directory, and that they have their +x bit set.  It should work fine
